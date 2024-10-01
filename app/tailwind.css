@@ -1,3 +1,5 @@
+@import '@animxyz/core';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,5 +10,19 @@ body {
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
+  }
+}
+
+body {
+  @apply h-screen overflow-auto;
+}
+
+@layer utilities {
+  .px-responsive {
+    @apply px-8 md:px-9 lg:px-12 max-w-screen-lg mx-auto;
+  }
+
+  .heading-section, .text-heading {
+    @apply text-navy font-display text-4xl lg:text-5xl font-bold leading-snug;
   }
 }

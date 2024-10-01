@@ -5,8 +5,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        display: [
+          '"Playfair Display"',
+          '"Libre Baskerville"',
+          "ui-serif",
+          "serif"
+        ],
         sans: [
-          '"Inter"',
+          '"Lato"',
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
@@ -16,6 +22,11 @@ export default {
           '"Noto Color Emoji"',
         ],
       },
+      colors: {
+        foam: '#e7ecef',
+        ocean: '#457b9d',
+        navy: '#274c77'
+      }
     },
   },
   plugins: [],
