@@ -32,14 +32,14 @@ export async function action({ request }: ActionFunctionArgs) {
     
     // send email
     const { name, email, message } = await zx.parseForm(formData, schema);
-    const res = await sendEmail({ sender: name, email, message });
-    if (res.accepted.length > 0) {
-      console.info('Message sent successfully', JSON.stringify(formData.entries()));
-      return json({ ok: true, message: null });
-    } else {
-      console.error('Error: failed to send email', JSON.stringify(res));
+    // const res = await sendEmail({ sender: name, email, message });
+    // if (res.accepted.length > 0) {
+    //   console.info('Message sent successfully', JSON.stringify(formData.entries()));
+    //   return json({ ok: true, message: null });
+    // } else {
+      console.error('Error: failed to send email'/*, JSON.stringify(res)*/);
       return json({ ok: false, message: 'Failed to send Email. Try again later.' });
-    }
+    // }
   } catch(error) {
     if (error instanceof SpamError) {
       // handle spam
