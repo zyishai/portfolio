@@ -9,7 +9,7 @@ export default {
           '"Playfair Display"',
           '"Libre Baskerville"',
           "ui-serif",
-          "serif"
+          "serif",
         ],
         sans: [
           '"Lato"',
@@ -23,10 +23,11 @@ export default {
         ],
       },
       colors: {
-        foam: '#e7ecef',
-        ocean: '#457b9d',
-        navy: '#274c77'
-      }
+        foam: "#e7ecef",
+        ocean: "#457b9d",
+        navy: "#0f1e2e", // "#14273d", //"#274c77",
+        night: "#0a141f", // "#14273d",
+      },
     },
   },
   plugins: [],
